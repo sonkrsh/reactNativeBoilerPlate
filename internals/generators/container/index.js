@@ -58,6 +58,21 @@ module.exports = {
     // Generate index.js and index.test.js
     const actions = [
       {
+        type: 'append',
+        path: '../../sagas.js',
+        pattern: /(\/\/ COMPONENT IMPORTS)/g,
+        template:
+          "import {{ camelCase name }}Saga from './components/{{properCase name}}';",
+        abortOnFail: true,
+      },
+      {
+        type: 'append',
+        path: '../../sagas.js',
+        pattern: /(\/\/ COMPONENT ADD)/g,
+        template: '{{ camelCase name }}Saga(),',
+        abortOnFail: true,
+      },
+      {
         type: 'add',
         path: '../../app/containers/{{properCase name}}/index.js',
         templateFile: './container/index.js.hbs',
