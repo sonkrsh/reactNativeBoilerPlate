@@ -62,7 +62,7 @@ module.exports = {
         path: '../../sagas.js',
         pattern: /(\/\/ COMPONENT IMPORTS)/g,
         template:
-          "import {{ camelCase name }}Saga from './components/{{properCase name}}/saga';",
+          "import {{ camelCase name }}Saga from './containers/{{properCase name}}/saga';",
         abortOnFail: true,
       },
       {
@@ -70,6 +70,21 @@ module.exports = {
         path: '../../sagas.js',
         pattern: /(\/\/ COMPONENT ADD)/g,
         template: '{{ camelCase name }}Saga(),',
+        abortOnFail: true,
+      },
+      {
+        type: 'append',
+        path: '../../reducers.js',
+        pattern: /(\/\/ REDUCER IMPORTS)/g,
+        template:
+          "import {{ camelCase name }}Reducer from './containers/{{properCase name}}/reducer';",
+        abortOnFail: true,
+      },
+      {
+        type: 'append',
+        path: '../../reducers.js',
+        pattern: /(\/\/ REDUCER ADD)/g,
+        template: '{{lowerCase name}}: {{ camelCase name }}Reducer,',
         abortOnFail: true,
       },
       {
