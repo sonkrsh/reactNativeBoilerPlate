@@ -1,0 +1,39 @@
+/**
+ *
+ * {{ properCase name }}
+ *
+ */
+
+{{#if memo}}
+import React, { memo } from 'react';
+{{else}}
+import React from 'react';
+{{/if}}
+
+import { View, Text } from 'react-native';
+// import PropTypes from 'prop-types';
+
+import strings from '../../../i18n';
+
+function {{ properCase name }}() {
+
+  const { {{ properCase name }}: {{ properCase name }}Message } = strings;
+
+  return (
+    <View>
+    {{#if wantMessages}}
+      <Text>
+       { {{ properCase name }}Message.header.defaultMessage}
+      </Text>
+    {{/if}}
+    </View>
+  );
+}
+
+{{ properCase name }}.propTypes = {};
+
+{{#if memo}}
+export default memo({{ properCase name }});
+{{else}}
+export default {{ properCase name }};
+{{/if}}
