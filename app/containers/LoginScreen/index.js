@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import {View, Text} from 'react-native';
 import {connect} from 'react-redux';
 import {createStructuredSelector} from 'reselect';
 import {makeSelectDashboard} from './selectors';
@@ -12,9 +12,9 @@ const index = props => {
   }, []);
 
   return (
-    <SafeAreaView>
-      <Text>hello from login SafeAreaView</Text>
-    </SafeAreaView>
+    <View>
+      <Text>hello from login View</Text>
+    </View>
   );
 };
 

@@ -8,15 +8,16 @@
 
 import React from 'react';
 import {Provider} from 'react-redux';
-import {SafeAreaView, Text} from 'react-native';
+import {Text} from 'react-native';
 import configureStore from './configureStore';
-import LoginScreen from './app/containers/LoginScreen';
+import AppC from './app/containers/App';
+
 const {store} = configureStore();
 
 const App = () => {
   return (
     <Provider store={store}>
-      <LoginScreen />
+      <AppC />
     </Provider>
   );
 };
