@@ -1,7 +1,7 @@
 import {all} from 'redux-saga/effects';
 
-//import navigationSaga from './app/containers/Navigation/saga';
+import dashboardSaga from './app/containers/LoginScreen/saga';
 
 export default function* rootContainerSaga() {
-  //yield all([navigationSaga()]);
+  yield all([dashboardSaga()]);
 }

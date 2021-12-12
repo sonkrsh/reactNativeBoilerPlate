@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 
-//import userTypeReducer from './app/containers/Auth/UserType/reducer';
+import dashboardReducer from './app/containers/LoginScreen/reducer';
 
 export default combineReducers({
-  //userType: userTypeReducer,
+  dashboard: dashboardReducer,
 });
 
 // Root Reducer
