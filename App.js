@@ -7,13 +7,17 @@
  */
 
 import React from 'react';
+import {Provider} from 'react-redux';
 import {SafeAreaView, Text} from 'react-native';
+import configureStore from './configureStore';
+import LoginScreen from './app/containers/LoginScreen';
+const {store} = configureStore();
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>souravDone</Text>
-    </SafeAreaView>
+    <Provider store={store}>
+      <LoginScreen />
+    </Provider>
   );
 };
 
