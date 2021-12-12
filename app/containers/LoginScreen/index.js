@@ -11,7 +11,6 @@ const index = props => {
     props.getTodaysShowsHandler();
   }, []);
 
-  console.log('===>>', props);
   return (
     <SafeAreaView>
       <Text>hello from login SafeAreaView</Text>
