@@ -62,7 +62,7 @@ module.exports = {
         path: '../../sagas.js',
         pattern: /(\/\/ COMPONENT IMPORTS)/g,
         template:
-          "import {{ camelCase name }}Saga from './components/{{properCase name}}';",
+          "import {{ camelCase name }}Saga from './components/{{properCase name}}/saga';",
         abortOnFail: true,
       },
       {
