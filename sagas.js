@@ -8,7 +8,7 @@ import appSaga from './app/containers/App/saga';
 export default function* rootContainerSaga() {
   yield all([
     // COMPONENT ADD
-homeSaga(),
+    homeSaga(),
     appSaga(),
     dashboardSaga(),
   ]);

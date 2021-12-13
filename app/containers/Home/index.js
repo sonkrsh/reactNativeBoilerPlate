@@ -12,12 +12,20 @@ import {compose} from 'redux';
 
 import makeSelectHome from './selectors';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import Animated from 'react-native-reanimated';
 
-export function Home() {
+export function Home({drawerAnimatedStyle}) {
   return (
-    <SafeAreaView>
+    <Animated.View
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        ...drawerAnimatedStyle,
+      }}>
       <Text>Homess</Text>
-    </SafeAreaView>
+    </Animated.View>
   );
 }
 

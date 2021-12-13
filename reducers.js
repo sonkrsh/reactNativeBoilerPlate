@@ -7,7 +7,7 @@ import appReducer from './app/containers/App/reducer';
 
 export default combineReducers({
   // REDUCER ADD
-home: homeReducer,
+  home: homeReducer,
   app: appReducer,
   dashboard: dashboardReducer,
 });
